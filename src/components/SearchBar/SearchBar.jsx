@@ -35,3 +35,5 @@ export default function SearchBar({ onHandleSubmit }) {
     </section>
   );
 }
+
+// export default SearchBar;

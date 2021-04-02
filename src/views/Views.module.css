@@ -27,8 +27,8 @@
 }
 
 .fullInfoMovieImg {
-  max-width: 320px;
-  height: 500px;
+  max-width: 260px;
+  /* height: 500px; */
   margin-bottom: 20px;
   border-radius: 5px;
   object-fit: cover;
@@ -70,7 +70,7 @@
 
 .actorsInfoItem {
   margin: 10px;
-  width: 400px;
+  width: 200px;
   padding: 5px;
   border-radius: 5px;
   overflow: hidden;
@@ -85,7 +85,7 @@
 }
 
 .actorsInfoImg {
-  width: 400px;
+  width: 150px;
   height: auto;
 }
 

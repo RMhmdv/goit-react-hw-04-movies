@@ -2,7 +2,7 @@ import s from "./Views.module.css";
 import { useState, useEffect } from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 import * as moviesAPI from "../services/moviesDB-api";
-import SearchBar from "components/SearchBar";
+import SearchBar from "../components/SearchBar";
 import Status from "../components/Status";
 import ErrorMessage from "../components/ErrorMessage";
 import Loader from "../components/Loader";

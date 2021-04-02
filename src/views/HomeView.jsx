@@ -27,7 +27,7 @@ export default function HomeView() {
 
   return (
     <main>
-      <h1 className={s.header}>Trenidng today</h1>
+      <h1 className={s.header}>Movies in trend today</h1>
       {status === Status.PENDING && <Loader />}
       {status === Status.REJECTED && <ErrorMessage message={error} />}
       {status === Status.RESOLVED && (
