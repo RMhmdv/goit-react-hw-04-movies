@@ -39,7 +39,7 @@ export default function ActorsInfo() {
               <img
                 src={
                   authors.profile_path
-                    ? `https://image.tmdb.org/t/p/w300/${authors.profile_path}`
+                    ? `https://image.tmdb.org/t/p/w500/${authors.profile_path}`
                     : noImage
                 }
                 alt={authors.original_name}

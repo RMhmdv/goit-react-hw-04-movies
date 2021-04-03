@@ -9,7 +9,7 @@ const Home = lazy(() =>
   import("./views/HomeView" /*webpackChunkName: "Home-view" */)
 );
 const Movies = lazy(() =>
-  import("./views/MoviesVeiw" /*webpackChunkName: "Movies-view" */)
+  import("./views/MoviesView" /*webpackChunkName: "Movies-view" */)
 );
 const FullInfo = lazy(() =>
   import("./views/FullInfoView" /*webpackChunkName: "FullInfoMovie-view" */)
