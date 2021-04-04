@@ -1,40 +1,40 @@
 import { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
 import AppBar from "./components/AppBar";
 import Container from "./components/Container";
-import Loader from "./components/Loader";
 
-const Home = lazy(() =>
-  import("./views/HomeView" /*webpackChunkName: "Home-view" */)
+const HomePage = lazy(() =>
+  import("./components/HomePage" /* webpackChunkName: "HomePage" */)
 );
-const Movies = lazy(() =>
-  import("./views/MoviesView" /*webpackChunkName: "Movies-view" */)
+const MoviesPage = lazy(() =>
+  import("./components/MoviesPage" /* webpackChunkName: "MoviesPage" */)
 );
-const FullInfo = lazy(() =>
-  import("./views/FullInfoView" /*webpackChunkName: "FullInfoMovie-view" */)
+const MovieDetailsPage = lazy(() =>
+  import(
+    "./components/MovieDetailsPage" /* webpackChunkName: "MovieDetailsPage" */
+  )
 );
 
 export default function App() {
   return (
     <Container>
       <AppBar />
-      <Suspense fallback={<Loader />}>
+
+      <Suspense fallback={<h1>Загружаем...</h1>}>
         <Switch>
           <Route path="/" exact>
-            <Home />
+            <HomePage />
           </Route>
 
           <Route path="/movies" exact>
-            <Movies />
+            <MoviesPage />
           </Route>
 
           <Route path="/movies/:movieId">
-            <FullInfo />
+            <MovieDetailsPage />
           </Route>
         </Switch>
       </Suspense>
-      <ToastContainer autoClose={2000} />
     </Container>
   );
 }
